@@ -5,17 +5,7 @@ const spacingX = ref(20);
 const spacingY = ref(0);
 
 const create = () => {
-  window.parent.postMessage(
-    {
-      pluginMessage: {
-        type: "array-modifier",
-        count: count.value,
-        spacingX: spacingX.value,
-        spacingY: spacingY.value,
-      },
-    },
-    "*"
-  );
+  console.log("clicked");
 };
 const cancel = () => {
   window.parent.postMessage({ pluginMessage: { type: "cancel" } }, "*");
